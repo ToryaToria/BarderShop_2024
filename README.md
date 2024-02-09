@@ -3,4 +3,4 @@
 
 Студент: [Виктория Калугина](https://up.htmlacademy.ru/htmlcss/39/user/1788421).
 
-* Мой проект: [Барбершоп]()
+* Мой проект: [Барбершоп](https://toryatoria.github.io/BarderShop_2024/)
