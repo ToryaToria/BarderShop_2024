@@ -51,6 +51,10 @@ footer section {
 
 }
 
+.sort-wrapp .button {
+	outline: 5px solid blue;
+}
+
 .wrap-sort {
 	outline: 5px solid thistle;
 }

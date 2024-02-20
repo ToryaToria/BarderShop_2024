@@ -51,9 +51,9 @@
 		</nav>
 	</header>
 
-	<main class="main-inner  main-container">
+	<main class="main-inner">
 		<header class="inner-header">
-			<h1 class="inner-header-title">Каталог</h1>
+			<h1 class="inner-title">Каталог</h1>
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs-item">
 					<a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -158,19 +158,21 @@
 
 		<section class="catalog">
 			<h2 class="visually-hidden">Каталог товаров</h2>
-			<div class="wrap-sort">
+			<div class="sort-container">
 				<select class="select-control" aria-label="Сортировка">
 					<option value="popular"> Сначала дорогие </option>
 					<option value="cheap">Сначала дешёвые</option>
 					<option value="expensive">Сначала популярные</option>
 				</select>
 
-				<a href="#" class="button button-light">
-					<span class="visually-hidden">Показать список</span>
-				</a>
-				<a class="button" href="#">
-					<b class="visually-hidden">Показать карточки</b>
-				</a>
+				<div class="sort-wrapp">
+					<a href="#" class="button button-light ">
+						<span class="visually-hidden">Показать список</span>
+					</a>
+					<a class="button" href="#">
+						<b class="visually-hidden">Показать карточки</b>
+					</a>
+				</div>
 			</div>
 
 			<ul class="product-list">
@@ -240,55 +242,49 @@
 					<a class="button button-prod-card" href="">Купить</a>
 				</li>
 			</ul>
-
+<div class="pagination-container">
 			<ul class="pagination">
 				<li class="pag-item">
 					<a class="pag-link pag-prev pag-disabled" href="">
-						<span class="visually-hidden">Предыдущая страница</span>
+						<span class="visually-hidden">Предыдущая страница</span> <
 					</a>
 				</li>
 
 				<li class="pag-item">
-					<a class="pag-link pag-current" href="">
-						<span class="visually-hidden">1</span>
-					</a>
+					<a class="pag-link pag-current" href=""> 1 </a>
 				</li>
 
 				<li class="pag-item">
-					<a class="pag-link" href="">
-						<span class="visually-hidden">2</span>
-					</a>
+					<a class="pag-link" href=""> 2</a>
 				</li>
 
 				<li class="pag-item">
-					<a class="pag-link" href="">
-						<span class="visually-hidden">3</span>
-					</a>
+					<a class="pag-link" href="">3</a>
 				</li>
 				<li class="pag-item">
-					<a class="pag-link" href="">
-						<span class="visually-hidden">4</span>
-					</a>
+					<a class="pag-link" href="">4</a>
 				</li>
 				<li class="pag-item">
-					<a class="pag-link" href="">
-						<span class="visually-hidden">5</span>
-					</a>
+					<a class="pag-link" href="">5</a>
 				</li>
 
 				<li class="pag-item">
 					<a class="pag-link pagination-next" href="">
-						<span class="visually-hidden">Следующая страница</span>
+						<span class="visually-hidden">Следующая страница</span>>
 					</a>
 				</li>
 			</ul>
 
-			<button class="button pagination-show-more" type="button">Показать ещё</button>
+			<button class="button pagination-show-more" type="button">
+				Показать ещё
+			</button>
+</div>
 		</section>
 </div>
 	</main>
 
-	<footer class="page-footer">
+	<footer class="main-footer">
+
 		<section class="footer-contacts">
 			<h2 class="visually-hidden">Контакты</h2>
 
@@ -319,17 +315,17 @@
 			<h2 class="footer-title">Давайте дружить</h2>
 			<ul class="footer-social-list">
 				<li class="footer-social-item">
-					<a class="button" href="#">
+					<a class="social-link" href="#">
 						<span class="visually-hidden">Твиттер</span>
 					</a>
 				</li>
 				<li class="footer-social-item">
-					<a class="button" href="#">
+					<a class="social-link" href="#">
 						<span class="visually-hidden">ВКонтакте</span>
 					</a>
 				</li>
 				<li class="footer-social-item">
-					<a class="button" href="#">
+					<a class="social-link" href="#">
 						<span class="visually-hidden">Инстаграм</span>
 					</a>
 				</li>
@@ -337,9 +333,6 @@
 			<p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
 		</section>
 	</footer>
-
-
-
 </body>
 
 </html>

@@ -60,6 +60,7 @@ body {
 /* +++++++++++++ общие +++++++++++++++++++*/
 body {
 	margin: 0 auto;
+	min-width: 1020px;
 	width: 1020px;
 
 	font-family: "PT Sans", sans-serif;
@@ -97,13 +98,17 @@ body {
 
 .nav-list,
 .adv-list,
-.footer-social-list {
+.footer-social-list,
+.breadcrumbs,
+.product-list,
+.pagination {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.title {
+.title,
+.inner-title {
 	margin: 0;
 }
 
@@ -377,13 +382,16 @@ gap: 8px;
 }
 
 /* +++++++++++++ КАТАЛОГ +++++++++++++++++++*/
-.page-header-logo {
-display: block;
+.navigation-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 margin-right: 100px;
 }
 
+
 .main-inner {
-	padding: 0 40px;
+	padding: 40px 40px 60px ;
 }
 
 .catalog-container {
@@ -395,11 +403,22 @@ margin-right: 100px;
 	margin-right: 20px;
 }
 
-.inner-header-title {
+.inner-header {
+margin-bottom: 32px;
+}
+
+.inner-title {
+padding-bottom: 16px;
+
 	font-family: "PT Sans Narrow", sans-serif;
 	font-size: 32px;
 	line-height: 110%;
 	text-transform: uppercase;
+}
+
+.breadcrumbs {
+	display: flex;
+	gap: 32px;
 }
 
 .breadcrumbs-link {
@@ -428,9 +447,28 @@ margin-right: 100px;
 	width: 700px;
 }
 
-.wrap-sort {
+.sort-container {
 	background-color: #ffffff;
+	padding: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-between;
 }
+
+.sort-wrapp {
+	max-width: 168px;
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 5px;
+}
+
+.sort-wrapp .button {
+	display: block;
+	padding: 14px 20px;
+	min-width: 16px;
+	min-height: 16px;
+}
+
 
 
 .button-light {
@@ -477,15 +515,35 @@ margin-right: 100px;
 	text-transform: uppercase;
 }
 
+.pagination {
+	max-width: 420px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
 .pag-link {
+	display: block;
+box-sizing: border-box;
+padding: 14px 20px;
+min-width: 50px;
+min-height: 44px;
+
+	
 	font-size: 16px;
 	line-height: 150%;
 	font-weight: 700;
 	color: #ffffff;
 	background-color: #000000;
 	text-decoration: none;
-
 }
+
+.pagination-container {
+	display: flex;
+justify-content: space-between;
+padding: 16px;
+}
+
 
 .pag-current {
 	color: #000000 ;
