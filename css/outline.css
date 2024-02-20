@@ -1,0 +1,61 @@
+body {
+	outline: 5px solid red;
+
+}
+
+section {
+	outline: 5px solid green;
+
+}
+
+.nav-list {
+	outline: 5px solid violet;
+}
+
+.nav-item {
+	outline: 5px solid lightblue;
+
+}
+
+.index-column {
+	outline: 5px solid orange;
+
+}
+
+footer {
+	outline: 5px solid blue;
+
+}
+
+footer section {
+	outline: 5px solid greenyellow;
+}
+
+.footer-social-list {
+	outline: 5px solid goldenrod;
+
+}
+
+.social-link {
+	outline: 5px solid royalblue;
+
+}
+
+.filters {
+	outline: 5px solid burlywood;
+
+}
+
+.catalog {
+	outline: 5px solid salmon;
+
+}
+
+.wrap-sort {
+	outline: 5px solid thistle;
+}
+
+.product-card {
+	outline: 5px solid hotpink;
+
+}
