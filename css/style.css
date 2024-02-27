@@ -39,9 +39,9 @@
 	font-display: swap;
 }
 
-/* ++++++++++++++ sticky-footer ++++++++++++++++++*/
+/* ++++++++++++ sticky-footer ++++++++++++++++++*/
 
-/* 
+
 html {
 	height: 100%;
 }
@@ -55,13 +55,9 @@ body {
 .main-container {
   flex-grow: 1;
 } 
-*/
+
 
 /* +++++++++++++ общие +++++++++++++++++++*/
-* {
-box-sizing: border-box;
-}
-
 body {
 	margin: 0 auto;
 	min-width: 1020px;
@@ -75,11 +71,16 @@ body {
 }
 
 .button {
+	display: inline-block;
 	font-family: inherit;
 	font-size: 16px;
 	line-height: 100%;
 	font-weight: 700;
 	text-align: center;
+
+	padding: 14px 20px;
+
+	cursor: pointer;
 
 	color: #ffffff;
 	background-color: #000000;
@@ -105,14 +106,19 @@ body {
 .footer-social-list,
 .breadcrumbs,
 .product-list,
-.pagination {
+.pagination,
+.serv-list,
+.cont-schedue-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 .title,
-.inner-title {
+.inner-title,
+.serv-name,
+.cont-sybtitle,
+.cont-text {
 	margin: 0;
 }
 
@@ -137,7 +143,6 @@ body {
 
 	display: flex;
 	flex-wrap: wrap;
-
 }
 
 .nav-user {
@@ -152,6 +157,7 @@ margin-left: auto;
 }
 
 .nav-link {
+	position: relative;
 	padding: 24px 20px;
 	display: block;
 	font-family: "PT Sans Narrow", sans-serif;
@@ -164,9 +170,28 @@ margin-left: auto;
 
 	text-transform: uppercase;
 	text-decoration: none;
-
-	
 }
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: red;
+}
+
+.navigation-link-login {
+  padding-left: 44px;
+}
+
+.navigation-link-login .navigation-icon {
+  right: auto;
+  left: 20px;
+  margin: auto 0;
+}
+
 /* ++++++++++++++++++++++++++++++++*/
 
 .main-index {
@@ -214,7 +239,7 @@ text-align: center;
 	margin: 0;
 }
 
-/* ++++++++++++++++++++++++++++++++*/
+/* ++++++++++++++ services ++++++++++++++++++*/
 .index-column {
 	display: flex;
 	padding: 40px;
@@ -231,7 +256,13 @@ text-align: center;
 	text-transform: uppercase;
 	
 	margin-right: 40px;
+}
 
+.serv-list {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+margin-bottom: 30px;
 }
 
 .serv-name {
@@ -245,7 +276,15 @@ text-align: center;
 	color: #AF7842;
 }
 
-/* ++++++++++++++++++++++++++++++++*/
+.button-all{
+  padding-right: 44px;
+  background-image: url("../img/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center right 20px;
+}
+
+/* ++++++++++++++ gallery ++++++++++++++++++*/
 .gallery {
 	width: 390px;
 
@@ -260,7 +299,7 @@ text-align: center;
 	margin-bottom: 20px;
 }
 
-/* ++++++++++++++++++++++++++++++++*/
+/* ++++++++++++ contacts ++++++++++++++++++++*/
 .contacts {
 	width: 350px;
 	margin-right: 40px;
@@ -274,16 +313,21 @@ text-align: center;
 	line-height: 140%;
 	text-transform: uppercase;
 	color: #AF7842;
+
+	margin-bottom: 8px;
 }
 
 .contacts-address {
 	font-style: normal;
+	margin-bottom: 22px;
 }
 
 .cont-text {
 	font-size: 16px;
 	line-height: 150%;
 	font-weight: 700;
+
+	margin-bottom: 8px;
 }
 
 .cont-phone {
@@ -296,7 +340,18 @@ text-align: center;
 	text-decoration: underline;
 }
 
-/* ++++++++++++++++++++++++++++++++*/
+.cont-schedue-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin-bottom: 21px;
+}
+
+.button + .button {
+  margin-left: 16px;
+}
+
+/* +++++++++++++a ppointment +++++++++++++++++++*/
 .appointment {
 	width: 430px;
 
@@ -340,7 +395,7 @@ gap: 19px 17px;
 	text-transform: uppercase;
 }
 
-/* ++++++++++++++++++++++++++++++++*/
+/* +++++++++++++ footer +++++++++++++++++++*/
 .main-footer, 
 .page-footer {
 
@@ -357,10 +412,25 @@ gap: 19px 17px;
 
 .main-footer {
 	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-bottom: 100px;
 }
 
 .footer-contacts {
 	width: 200px;
+}
+
+.footer-contacts-logo {
+	display: block;
+	margin-bottom: 24px;
+}
+
+.footer-cont-text {
+	margin-bottom: 4px;
+}
+
+.footer-cont-phone {
+	margin-bottom: 16px;
 }
 
 .footer-mewsletter {
