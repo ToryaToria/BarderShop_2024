@@ -83,7 +83,32 @@
 
 				<fieldset class="filter-group">
 					<legend class="filter-title">Цена</legend>
-					я пока не знаю как это сделать (обещали разобрать в 9 разделе)
+					
+					<div class="range">
+						<div class="range-scale">
+							<div class="range-bar">
+								<button class="range-toggle toggle-min" type="button">
+									<span class="visually-hidden">Изменить минимальную цену</span>
+								</button>
+								<button class="range-toggle toggle-max" type="button">
+									<span class="visually-hidden">Изменить максимальную цену</span>
+								</button>
+							</div>
+						</div>
+
+						<div class="range-wrapper-inputs">
+							<label class="catalog-filter-label">
+								от <input class="range-input" type="number" value="50" name="min-price"> ₽
+							</label>
+							<label class="catalog-filter-label">
+								до <input class="range-input" type="number" value="1500" name="max-price"> ₽
+							</label>
+						</div>
+					</div>
+
+
+
+
 				</fieldset>
 
 				<fieldset class="filter-group">
