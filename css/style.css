@@ -148,7 +148,8 @@ body {
 .pagination,
 .serv-list,
 .cont-schedue-list,
-.slider-division {
+.slider-division,
+.filter-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -483,7 +484,6 @@ body {
 	gap: 8px;
 }
 
-
 /* ++++++++++++ contacts ++++++++++++++++++++*/
 .contacts {
 	width: 350px;
@@ -817,6 +817,81 @@ border: 2px solid #242424;
 	color: #595959;
 }
 
+/* +++++++++++++ КАТАЛОГ  range +++++++++++++++++++*/
+
+/* Range */
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: #242424;
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #af7842;
+}
+
+.range-toggle {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #242424;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+	gap: 4px;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  gap: 5px;
+}
+
+.range-input {
+  width: 36px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+/*не  поняза зачем это?*/
+/* .range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+} */
+
+.range-toggle:hover {
+  background-color: #dbb590;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #dbb590;
+} 
+
 .catalog-filter {
 	font-weight: 700;
 }
@@ -827,6 +902,117 @@ border: 2px solid #242424;
 	line-height: 140%;
 	text-transform: uppercase;
 }
+
+/* +++++++++++ КАТАЛОГ  filter  checked & radio ++++++++++++*/
+
+.filter-group {
+margin: 0;	
+margin-bottom: 40px;
+
+padding: 0;
+border: none;
+}
+
+.filter-list {
+	display: flex;	
+	flex-direction: column;
+	gap: 16px;
+}
+
+/* Control */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-label {
+	line-height: 22px;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #242424;
+}
+
+.control:hover .control-mark {
+  border-color: #814b18;
+}
+
+.control-input:disabled + .control-mark {
+  border-color: #242424;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background-color: #242424;
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  transform: rotate(45deg);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  transform: rotate(-45deg);
+}
+
+/* Radio */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 50%;
+  content: "";
+}
+
+/* +++++++++++++ КАТАЛОГ  select +++++++++++++++++++*/
+.select-control {
+	 padding: 8px 14px;
+  padding-right: 124px;
+  font: inherit;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 2px solid #242424;
+  background-image: url("../img/icons/arr-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+
+
+
+	}
+
+
+.select-control:hover,
+.select-control:focus {
+  border-color: #af7842;
+}
+
+.select-control:focus {
+  outline: 2px solid #dbb590;
+}
+
+
+
+/* +++++++++++++ КАТАЛОГ  sort-container +++++++++++++++++++*/
 
 .card-grid-toggle:hover {
 	background-color: #814b18;
@@ -850,6 +1036,9 @@ border: 2px solid #242424;
 .card-grid-toggle:focus svg {
 	fill: #ffffff;
 }
+
+/* +++++++++++++ КАТАЛОГ  catalog +++++++++++++++++++*/
+
 
 .catalog {
 	width: 700px;
