@@ -720,8 +720,82 @@ border: 2px solid #242424;
   opacity: 1;
 }
 
+/* +++++++++++++ tooltip +++++++++++++++++++*/
+.tooltip {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.tooltip-text {
+	display: none;
+
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 6px;
+
+	left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+	
+	padding: 5px 8px;
+  border-radius: 8px;
+  width: 160px;
+
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  text-transform: none;
+
+	background-color: #242424;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #AF7842;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
 
 
+.tooltip-text:after {
+  content:'';
+  width: 14px;
+  height: 6px;
+  position:absolute;
+
+	background-image: url("../img/icons/corner.svg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100%;
+
+  transform: rotate(180deg);
+  top: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* +++++++++++++ footer +++++++++++++++++++*/
 .main-footer,
 .page-footer {
